@@ -37,8 +37,7 @@ width: 500px;
     height: 300px;
     padding-top: 600px;
     float: right;
-padding-right: 280px;
-
+padding-right: 190px;
 }
 .title {
     font-family: 'Montserrat', sans-serif;
@@ -84,11 +83,11 @@ p{
 }
 .image{
     position: center;
-    padding: 20px 0 20px 400px;
+    padding: 20px 0 20px 260px;
 }
 .othervideos{
     position: center;
-    padding: 20px 0 10px 400px;
+    padding: 20px 0 10px 260px;
 }
 .correction{
     font-family: 'Montserrat', sans-serif;
