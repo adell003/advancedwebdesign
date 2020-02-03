@@ -1,0 +1,136 @@
+/* this is where all of your CSS styles go */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 800px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    top: 48%; /* for optical centering */
+    margin-top: -50px;
+    margin-left: -328px;
+}
+
+.letter{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 8em;
+    float: left;
+    margin-left: 5px;
+}
+
+@keyframes i1_move {
+    0%, 100% {
+        top:0;
+    }
+    50%{
+        top: -1000px;
+    }
+}
+
+.i1{
+    position: relative;
+    animation: i1_move 5s infinite ease;
+}
+
+@keyframes m1_move {
+0%, 100% {
+    top: 0;
+    left: 0;
+}
+    50%{
+        top: 500px;
+        left: -500px;
+    }
+}
+
+.m1{
+    position: relative;
+    animation: m1_move 5s infinite ease;
+}
+
+@keyframes t_move {
+    0%, 100% {
+        bottom: 0;
+    }
+    50%{
+        bottom: -1000px;
+    }
+}
+
+.t{
+    position: relative;
+    animation: t_move 5s infinite ease;
+}
+
+@keyframes e2_move {
+    0%, 100% {
+        top: 0;
+        right: 0;
+    }
+    50% {
+        top: -500px;
+        right: -500px;
+    }
+}
+
+.e2{
+    position: relative;
+    animation: e2_move 5s infinite ease;
+}
+
+@keyframes square_fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.square{
+    animation: square_fade 5s infinite linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    width: 800px;
+    height: 300px;
+    background: chartreuse;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -150px;
+    z-index: -1;
+    transform-origin: 50% 50%;
+}
+
+@keyframes woah {
+    0% 	{ transform: rotate(0deg); width: 0; height: 0; border-radius: 0; opacity: 0; }
+    20%	{ transform: rotate(0deg); width: 800px; height: 0; border-radius: 0; opacity: 1; }
+    40%	{ transform: rotate(0deg); width: 800px; height: 300px; border-radius: 0; opacity: 1; }
+    50% { transform: rotate(0deg); width: 300px; height: 300px; border-radius: 0; opacity: 1; }
+    60%	{ transform: rotate(-360deg); width: 300px; height: 300px; border-radius: 0; opacity: 1; }
+    70%	{ transform: rotate(-360deg); width: 800px; height: 300px; border-radius: 0; opacity: 1; }
+    80% 	{ transform: rotate(-360deg); width: 5px; height: 5px; border-radius: 0; opacity: 1;  }
+    100% 	{ transform: rotate(-360deg); width: 800px; height: 800px; border-radius: 0; opacity: 0; }
+}
+
+.square_circle{
+    animation: woah 5s infinite cubic-bezier(1,0,0,1);
+    width: 0;
+    height: 0;
+    border: solid black 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    opacity: 0;
+}
