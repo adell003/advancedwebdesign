@@ -1,0 +1,118 @@
+.wrapper{
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(0deg, black, black, black, #02022D,lightsteelblue);
+    background-size: 300% 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: gradient 15s infinite;
+    overflow: hidden;
+}
+
+.author{
+    width:400px;
+    position: absolute;
+    top: 7%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    font-family: p22-mackinac-pro, serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+    font-kerning: auto;
+    z-index: 100;
+    transition: filter 1s;
+}
+
+.author:hover{
+    filter: invert(100%);
+    transition: filter 1s;
+    cursor: none;
+}
+
+
+
+.title{
+    top: -13%;
+    position: absolute;
+}
+
+@keyframes wave-animation{
+    0% {background-size: 100%;}
+    100% {background-size: 200%;}
+}
+
+@keyframes loading-animation{
+    0% {background-size:200px 0;}
+    100% {background-size:200px 200px;}
+}
+
+.wave{
+    background-image:url('../redbubbles.jpg');
+    width: 400px;
+    height: 200px;
+    @include background-clip(text);
+    animation:wave-animation 10s infinite linear alternate;
+    background-size:200px 100px;
+    background-repeat:repeat-x;
+    opacity:100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.novel{
+    width:400px;
+    position: absolute;
+    top: 30%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    font-family: p22-mackinac-pro, serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+    font-kerning: auto;
+}
+
+.boat{
+    position: absolute;
+    top: 53%;
+    left: -60%;
+    opacity: 70%;
+    animation: boat 4s ease-out infinite;
+}
+
+@keyframes boat {
+    0%{left: -60%;}
+100%{left: 100%;}
+}
+
+
+
+.sharkpng{
+    position: relative;
+    top: 45%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    animation: shark 4s ease-out infinite;
+}
+
+@keyframes shark {
+    0%{
+        top: 100%;
+    }
+    50%{
+        top: 45%;
+    }
+    100%{
+        top: 100%;
+    }
+}
+
+
+
+
